@@ -1,0 +1,31 @@
+{% from "_render_field.html" import render_field %} {% from "_formhelpers.html" import render_field %} {% extends 'index.html' %} {% block body %}
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-8">
+            <div class="title-box-2">
+                <h5 class="title-left text-center">
+                    Les Detail du cas!!!!
+                </h5>
+                <div class="page-header text-capitalize alert-primary text-center">
+                    <h6 class="category ">Somme Collecter</h6>
+                    <p> {{ detail.sommecollecter }} Fcfa</p>
+                </div>
+                <div class="page-header text-capitalize alert-primary text-center">
+                    <h6 class="category ">somme Restante</h6>
+                    <p> {{ detail.sommerestante }} Fcfa</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,398 @@
+{% from "_render_field.html" import render_field, render_radio_fields %} {% from "_formhelpers.html" import render_field %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DMY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="{{url_for( 'static', filename='img/favicon.png')}}" rel="icon">
+    <link href="{{url_for( 'static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{{url_for( 'static', filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{{url_for( 'static', filename='lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{url_for( 'static', filename='lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{url_for( 'static', filename='lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+    <link href="{{url_for( 'static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{url_for( 'static', filename='lib/lightbox/css/lightbox.min.css')}}" ,rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{{url_for( 'static', filename='css/style.css')}}" rel="stylesheet">
+
+    <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="page-top">
+
+    <!--/ Nav Star /-->
+    <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="#page-top">DMY</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+            <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll active" href="#home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#about">Qui sommes-nous?</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#service">Projets</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="{{url_for( 'listecas')}}">liste cas!!!</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#connect">Se connecter</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Nav End /-->
+
+    <!--/ Intro Skew Star /-->
+    <div id="home" class="intro route bg-image" style="background-image: url(static/img/imgFond.jpeg)"></div>
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+        <div class="table-cell">
+            <div class="container">
+                {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %}
+                <ul class=flashes>
+                    {% for category, message in messages %}
+                    <li style="text-align: center;color: rgb(7, 165, 15);font-size: 20px;" class="alert alert-{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                    <br>
+                </ul>
+                {% endif %} {% endwith %}
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--/ Intro Skew End /-->
+
+    <section id="about" class="about-mf sect-pt4 route">
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="box-shadow-full">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="{{url_for( 'static', filename='img/logo.jpg')}}" class="img-fluid rounded b-shadow-a" alt=" ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-7">
+                                        <div class="about-info">
+                                            <p><span class="title-s">Nom: </span> <span>Dimbeuli Malades Yi(DMY)</span></p>
+                                            <p><span class="title-s">Email: </span> <span>dmy@gmail.com</span></p>
+                                            <p><span class="title-s">Téléphone: </span> <span>333333333</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-mf">
+                                    <p class="title-s">Projets aboutis</p>
+                                    <span>Fond d'aide à Adama(Cancer)</span> <span class="pull-right">100%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Association des medecins (Construction postes de sante)</span> <span class="pull-right">100%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Achat de materiels(Hpital Abass Ndao)</span> <span class="pull-right">100%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-me pt-4 pt-md-0">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            Qui sommes sommes-nous?
+                                        </h5>
+                                    </div>
+                                    <p class="lead">
+                                        DMY est une plateforme de crowdfunding,créée en Aout 2020, elle a pour vocation de soutenir financièrement et opérationnellement des projets dans le domaine médical. Grâce au financement participatif, nous accompagnons les associations et les personnes
+                                        vers la réalisation de leurs projets et nous les renforçons en les rendant plus visibles et plus performantes via l’utilisation du numérique.
+                                    </p>
+                                    <p class="lead">
+                                        DMY est une plateforme entièrement gratuite et sans commission pour les associations ni pour les donnateurs. Une équipe d'expert vous accompagne tout au long de votre campagne et vous propose des conseils personnalisés pour réussir votre campagne.
+                                    </p>
+                                    <p class="lead">
+                                        Bien plus qu'une simple solution de financement, la campagne de crowdfunding est un excellent levier de communication. Grace à des outils digitaux ou des conseils, votre visibilité est boostée. Votre cagnotte augmente deux fois plus vite grace à DMY!!!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--/ Section Services Star /-->
+    <section id="service" class="services-mf route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-a">
+                            PROJETS
+                        </h3>
+                        <p class="subtitle-a">
+                            Faire un don, c'est sauver des vies!!!
+                        </p>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-4 ">
+                    <div class="card card-blog ">
+                        <div class="card-img ">
+                            <a href="blog-single.html "><img src="{{url_for( 'static', filename='img/child.jpeg' )}} " alt=" " class="img-fluid "></a>
+                        </div>
+                        <div class="card-body ">
+                            <div class="card-category-box ">
+                                <div class="card-category ">
+                                    <h6 class="category ">Sauver les enfants malades</h6>
+                                </div>
+                            </div>
+                            <h3 class="card-title "><a href="blog-single.html ">En savoir plus sur le projet!!!</a></h3>
+                            <p class="card-description ">
+                                Ceci est un projet de l'association d'aide des enfants souffrants d'une maladie cardiaque.
+                            </p>
+                            <div class="col-md-12 ">
+                                <button type="submit " class="btn btn-danger pull-right">Soutenir le projet</button>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <p>Progression du projet</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="45%" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="pull-right">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card card-blog ">
+                        <div class="card-img ">
+                            <a href="blog-single.html "><img src="{{url_for( 'static', filename='img/labos.jpeg' )}} " alt=" " class="img-fluid "></a>
+                        </div>
+                        <div class="card-body ">
+                            <div class="card-category-box ">
+                                <div class="card-category ">
+                                    <h6 class="category ">Construction de labos</h6>
+                                </div>
+                            </div>
+                            <h3 class="card-title "><a href="blog-single.html ">En savoir plus sur le projet!!!</a></h3>
+                            <p class="card-description ">
+                                Ceci est un prjet de construction de laboratoires d'analyses à l'hopital de Mbour.
+                            </p>
+                            <div class="col-md-12 ">
+                                <button type="submit " class="btn btn-danger pull-right">Soutenir le projet</button>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <p>Progression du projet</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75%" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="pull-right">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card card-blog ">
+                        <div class="card-img ">
+                            <a href="blog-single.html"><img src="{{url_for( 'static', filename='img/cancer.jpeg' )}} " alt=" " width="100%" height="250" class="img-fluid "></a>
+                        </div>
+                        <div class="card-body ">
+                            <div class="card-category-box">
+                                <div class="card-category ">
+                                    <h6 class="category ">Fonds d'aide contre le cancer du sein</h6>
+                                </div>
+                            </div>
+                            <h3 class="card-title "><a href="blog-single.html ">En savoir plus sur le projet!!!</a></h3>
+                            <p class="card-description ">
+                                Ceci est un projet de fonds d'aide aux femmens souffrant du cancer du sein.
+                            </p>
+                            <div class="col-md-12 ">
+                                <button type="submit " class="btn btn-danger pull-right">Soutenir le projet</button>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <p>Progression du projet</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20%" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="pull-right">20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Section Services End /-->
+
+
+    <!--/ Section Portfolio Star /-->
+
+    <!--/ Section Portfolio End /-->
+
+    <!--/ Section Testimonials Star /-->
+
+
+    <!--/ Section Blog Star /-->
+
+    <!--/ Section Blog End /-->
+
+    <!--/ Section Contact-Footer Star /-->
+    <section class="paralax-mf footer-paralax bg-image sect-mt4 route " id="connect">
+        <div class="overlay-mf "></div>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-12 ">
+                    <div class="contact-mf ">
+                        <div id="contact " class="box-shadow-full ">
+                            <div class="row ">
+                                <div class="col-md-6 ">
+                                    <div class="title-box-2 ">
+                                        <h5 class="title-left ">
+                                            Connexion
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <form id='' action="{{url_for('login')}}" method="POST" enctype="multipart/form-data" name="">
+                                            <dl>
+                                                <div class="page-header text-capitalize alert-primary text-center">
+                                                    <h3> {{ render_field(forme.email) }} </h3>
+                                                </div>
+                                                <div class="page-header text-capitalize alert-primary text-center">
+                                                    <h3> {{ render_field(forme.password) }} </h3>
+                                                </div>
+
+
+                                            </dl>
+                                            <button class="btn btn-success" type="submit" name="signIn">Se connecter</button>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="title-box-2 pt-4 pt-md-0 ">
+                                        <div class="title-box-2 ">
+                                            <h5 class="title-left ">
+                                                Merci de vous inscrire
+                                            </h5>
+                                        </div>
+                                        <div class="panel-body">
+
+                                            <form id='' method="POST" enctype="multipart/form-data" name="">
+                                                <dl>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3>{{ render_field(form.nom) }} </h3>
+                                                    </div>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3>{{ render_field(form.prenom) }}</h3>
+                                                    </div>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3>{{ render_field(form.email) }} </h3>
+                                                    </div>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3> {{ render_field(form.adresse) }} </h3>
+                                                    </div>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3> {{ render_field(form.telephone) }} </h3>
+                                                    </div>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3> {{ render_field(form.nomassociation) }} </h3>
+                                                    </div>
+                                                    <div class="page-header text-capitalize alert-primary text-center">
+                                                        <h3> {{ render_field(form.password) }} </h3>
+                                                    </div>
+
+
+                                                </dl>
+                                                <br>
+
+                                                <p style="color: black;"><input type="submit" class="btn btn-primary" value="Valider">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="socials ">
+                                    <ul>
+                                        <li><a href=" "><span class="ico-circle "><i class="ion-social-facebook "></i></span></a></li>
+                                        <li><a href=" "><span class="ico-circle "><i class="ion-social-instagram "></i></span></a></li>
+                                        <li><a href=" "><span class="ico-circle "><i class="ion-social-twitter "></i></span></a></li>
+                                        <li><a href=" "><span class="ico-circle "><i class="ion-social-pinterest "></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--/ Section Contact-footer End /-->
+
+    <a href="# " class="back-to-top "><i class="fa fa-chevron-up "></i></a>
+    <div id="preloader "></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="{{url_for( 'static', filename='lib/jquery/jquery.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/jquery/jquery-migrate.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/popper/popper.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/bootstrap/js/bootstrap.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/easing/easing.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/counterup/jquery.waypoints.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/counterup/jquery.counterup.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/owlcarousel/owl.carousel.min.js' )}} "></script>
+    <script src=" {{url_for( 'static', filename='lib/lightbox/js/lightbox.min.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='lib/typed/typed.min.js' )}} "></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="{{url_for( 'static', filename='contactform/contactform.js' )}} "></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="{{url_for( 'static', filename='js/main.js' )}} "></script>
+
+</body>
+
+</html>

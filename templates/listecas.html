@@ -1,0 +1,73 @@
+{% from "_render_field.html" import render_field, render_radio_fields %} {% from "_formhelpers.html" import render_field %} {% extends 'index.html' %} {% block body %}
+<div class="container">
+    <div class="row">
+        {% for cas in cas %}
+        <div class="col-md-4 ">
+            <div class="card card-blog ">
+                <div class="card-img ">
+                    <a href="blog-single.html "><img src="{{ cas.photo }}" alt=" " class="img-fluid "></a>
+                </div>
+                <div class="card-body ">
+                    <div class="card-category-box ">
+                        <div class="card-category ">
+                            <h6 class="category ">Sauver des vies</h6>
+                        </div>
+                    </div>
+                    <p class="card-description ">
+                        <h6 class="category ">Description</h6>
+                        {{ cas.description }}
+                    </p>
+                    <div class="col-md-12 ">
+                        <a href="{{url_for('show',id=cas.id)}}" class="btn btn-primary float-right">
+                            <i class="fas fa-shopping-cart mr-1"></i> Faire un don
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card-footer ">
+                    <h6 class="category ">Montant</h6>
+                    <p> {{ cas.montant }} Fcfa</p>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="45%" aria-valuemin="0" aria-valuemax="100">
+                            <a href="{{url_for('detailcas',id=cas.id)}}" class="btn btn-success float-right">
+                                <i class="fas fa-shopping-cart mr-1"></i> Detail cas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="45%" aria-valuemin="0" aria-valuemax="100">
+                            <span class="pull-right">{{ cas.datelimite }}</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- <div class="col-4 mt-4">
+            <div class="border border-dark rounded p-2 clearfix">
+                <h2>
+                    {{ cas.description }} - {{ cas.montant }} Fcfa
+                </h2>
+                <img class="img-fluid rounded" src="{{ cas.photo }}" alt="Image de {{ cas.description }}">
+                <hr>
+                <a href="{{url_for('show',id=cas.id)}}" class="btn btn-success float-right">
+                    <i class="fas fa-shopping-cart mr-1"></i> Faire un don
+                </a>
+            </div>
+
+        </div> -->
+        {% endfor %}
+
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

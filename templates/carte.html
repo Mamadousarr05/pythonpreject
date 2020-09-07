@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<title>Cartographie des sites</title>
+	<!-- =================== META =================== -->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="">
+	<!-- =================== STYLE =================== -->
+	<link rel="stylesheet" type="text/css" href="static/css/slick.min.css"/>
+	<link rel="stylesheet" href="static/css/bootstrap-grid.css">
+	<link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/nice-select.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body style="background-color: silver;" id="home">
+	{% block body%}
+
+	<!-- ============== PRELOADER END ============== -->
+	<span class="bg-effect" style=""></span>
+	<!-- ================= HEADER ================= -->
+	<header class="marathon-header-fixed header-fixed">
+		<a href="#" class="nav-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+		<div class="top-panel">
+			<div class="container">
+				<a href="index.html" class="logo"><p>SenCovid</p></a>
+			</div>
+		</div>
+		<div class="header-nav">
+			<div class="container">
+				<div class="header-nav-cover">
+					<nav class="nav-menu menu">
+						<ul class="nav-list">
+							<li class="dropdown active-page">
+								<a href="/">accueil</a>
+							</li>
+							<li><a href="formtest">Statistiques</a></li>
+							<li><a href="#about">Formulaire de Test</a></li>
+							<li><a href="#schedule">Dénoncer un cas suspect</a></li>
+							<li><a href="#location">Cartographie des sites</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- =============== HEADER END =============== -->
+<br><br><br><br><br><br><br>
+
+<section id="register" class="s-buy-ticket">
+	<div class="container">
+		<h5 class="title-conference"><span>Les sites ou sont hébergés les malades au Sénégal</span></h5>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+								<iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/alassane-laye-aw_443538?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe><p><a href="//umap.openstreetmap.fr/fr/map/alassane-laye-aw_443538"></a></p>	
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+</section>
+	<!-- ============= MAP-WITH-ROUTE END ============= -->
+	<!-- ============= MAP-WITH-ROUTE END ============= -->
+
+
+	<!--==================== FOOTER ====================-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="footer-cont col-12 col-sm-6 col-lg-4">
+					<a href="index.html" class="logo"><p>SenCovid</p></a>
+					<p></p>
+					<div class="footer-copyright"><a target="_blank">SenCovid</a> © 2020. All Rights Reserved.</div>
+				</div>
+				<div class="footer-item-link col-12 col-sm-6 col-lg-4">
+					<div class="footer-link">
+					</div>
+					<div class="footer-link">
+					</div>
+				</div>
+				<div class="footer-subscribe col-12 col-sm-6 col-lg-4">
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================== FOOTER END ==================-->
+
+	<!--=================== TO TOP ===================-->
+	<a class="to-top" href="#home">
+		<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+	</a>
+	<!--================= TO TOP END =================-->
+
+	<!--=================== SCRIPT	===================-->
+	<script src="static/js/jquery-2.2.4.min.js"></script>
+	<script src="static/js/slick.min.js"></script>
+	<script src="static/js/rx-lazy.js"></script>
+	<script src="static/js/jquery.nice-select.js"></script>
+	<script src="static/js/parallax.min.js"></script>
+	<script src="static/js/scripts.js"></script>
+
+	{% endblock body%}
+</body>
+</html>

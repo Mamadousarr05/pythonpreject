@@ -1,0 +1,74 @@
+{% from "_render_field.html" import render_field, render_radio_fields %} {% from "_formhelpers.html" import render_field %} {% extends 'index.html' %} {% block body %}
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-header text-capitalize alert-primary text-center">
+            <h1>Bienvenue {{data.prenom}} {{data.nom}} {{data.nomassociation}} merci de presenter votre cas</h1>
+        </div>
+        <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form class="signUp" action="{{url_for('cas')}}" method="post" id="signUpForm">
+                            <div class="title-box-2">
+                                <h5 class="title-left">
+                                    Votre cas!
+                                </h5>
+                                <div class="page-header text-capitalize alert-primary text-center">
+                                    <h1>{{ render_field(form.description )}} </h1>
+                                </div>
+                                <div class="page-header text-capitalize alert-primary text-center">
+                                    <h3>{{ render_field(form.montant) }} </h3>
+                                </div>
+                                <div class="page-header text-capitalize alert-primary text-center">
+                                    <h3>{{ render_field(form.photo) }} </h3>
+                                </div>
+                                <div class="page-header text-capitalize alert-primary text-center">
+                                    <h3>{{ render_field(form.datelimite) }} </h3>
+                                </div>
+
+                                <div class="page-header text-capitalize  text-center">
+                                    <button class="btn btn-primary" type="submit" name="nouveau">Enregistrer votre cas</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="title-box-2 pt-4 pt-md-0">
+                            <h5 class="title-left">
+                                Information!!!
+                            </h5>
+                        </div>
+                        <div class="more-info">
+                            <p class="lead">
+                                Celle-ci est vue de façon fonctionnelle même si son objet est technique puisqu'il s'agit de représenter un système d'information. ... La couche d' acquisition regroupe les fonctions bancaires pouvant être utilisées à tous moment du cycle de traitement
+                                des opérations bancaires dans le système d'information de la Banque.
+                            </p>
+                            <ul class="list-ico">
+                                <li><span class="ion-ios-location"></span> 329 SENEGALE ST DAKAR, MA 02108</li>
+                                <li><span class="ion-ios-telephone"></span> (333) 557-0089</li>
+                                <li><span class="ion-email"></span> Bdp@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="socials">
+                            <ul>
+                                <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                                <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                                <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
+                                <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
